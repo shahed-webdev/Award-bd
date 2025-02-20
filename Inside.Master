@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Inside.master.cs" Inherits="Award__bd.Inside" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Award bd</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link href="/CSS/Gridview.css" rel="stylesheet" />
+    <link href="/CSS/Inside_Master.css" rel="stylesheet" />
+    <link href="/CSS/Print.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <header class="headerBack">
+            <div class="container-fluid">
+                <div class="col-md-10 col-sm-10 text-center-xs">
+                    <div class="navbar-brand">award bd</div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 NoPrint">
+                    <asp:LoginView ID="CustomerLoginView" runat="server">
+                        <AnonymousTemplate>
+                            <a href="/Default.aspx">Login</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <div class="btn-group pull-right" style="padding-top: 12px">
+                                <asp:LoginName ID="CustomerLoginName" runat="server" CssClass="Username" data-toggle="dropdown" />
+                                <div class="caret" data-toggle="dropdown"></div>
+                                <ul class="dropdown-menu">
+                                    <li><i class="glyphicon glyphicon-user"></i><a href="/Profile_Redirect.aspx">Profile</a></li>
+                                    <li class="divider"></li>
+                                    <li><i class="glyphicon glyphicon-log-out"></i>
+                                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutPageUrl="~/Default.aspx" LogoutAction="Redirect" OnLoggingOut="LoginStatus1_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </header>
+
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-lg-2" id="Side_Nav">
+                    <nav class="navbar navbar-default navbar-fixed-side">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <asp:TreeView ID="LinkTreeView"
+                                ExpandImageUrl="~/CSS/Image/Expand_Ico.png"
+                                CollapseImageUrl="~/CSS/Image/Collaps_Ico.png"
+                                NodeStyle-CssClass="treeNode"
+                                RootNodeStyle-CssClass="rootNode"
+                                LeafNodeStyle-CssClass="leafNode"
+                                SelectedNodeStyle-CssClass="Selected_Node"
+                                NodeWrap="true"
+                                runat="server">
+                            </asp:TreeView>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-sm-9 col-lg-10" id="Main_Contain">
+                    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+                    <script src="/Bootstrap/js/bootstrap.min.js"></script>
+                    <!--Autocomplete-->
+                    <script type="text/javascript" src="https://cdn.rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>
+                    <!-- Bootstrap Date-Picker Plugin -->
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+                    <asp:ContentPlaceHolder ID="body" runat="server" />
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer container-fluid text-center">
+            <div class="CopyRight">
+                Copyright © <span id="c-Year"></span> Award bd. Developed By <a href="https://loopsit.com/" target="_blank">Loops IT</a>
+            </div>
+        </footer>
+
+
+        <script src="/JS/Resize_Img/binaryajax.js"></script>
+        <script src="/JS/Resize_Img/canvasResize.js"></script>
+        <script src="/JS/Resize_Img/exif.js"></script>
+
+        <script>
+
+            $(function () {
+                $("#c-Year").text((new Date).getFullYear());
+
+                //Top
+                $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span></div>');
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() != 0) {
+                        $('#toTop').fadeIn();
+                    } else {
+                        $('#toTop').fadeOut();
+                    }
+                });
+                $('#toTop').click(function () {
+                    $("html, body").animate({ scrollTop: 0 }, 600);
+                    return false;
+                });
+
+                //Bottom
+                $('body').append('<div id="toBottom" class="btn btn-info"><span class="glyphicon glyphicon-chevron-down"></span></div>');
+                $(window).scroll(function () {
+                    var scrollBottom = $(this).scrollTop() + $(this).height();
+                    if (scrollBottom != $('body').height()) {
+                        $('#toBottom').fadeIn();
+                    } else {
+                        $('#toBottom').fadeOut();
+                    }
+                });
+                $('#toBottom').click(function () {
+                    $("html, body").animate({ scrollTop: $('body').height() }, 600);
+                    return false;
+                });
+            });
+
+        </script>
+    </form>
+</body>
+</html>

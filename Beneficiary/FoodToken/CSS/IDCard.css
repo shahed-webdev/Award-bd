@@ -1,0 +1,27 @@
+﻿
+#container { display: grid; grid-gap:20px; grid-template-columns: repeat(2, 1fr);}
+#container > div{border: 1px solid #000;}
+
+.C-header { display: grid; grid-template-columns: 50px 1fr 50px; text-align: center; border-bottom: 1px solid #000; padding: 6px; margin-bottom:4px;}
+.C-header img { height:50px; width:50px}
+.C-header h5 { font-size: 16px; font-weight: bold; margin:6px 0 0 0; }
+
+.Info-bcode { margin:10px 0;text-align:center;}
+.Barcode { margin:auto !important}
+
+.Foods_Time { margin:15px 4px;font-size:12px;}
+.Foods_Time table { width:100%;}
+.Foods_Time table tr{border-bottom:1px solid #000 }
+.Foods_Time table tr td{width:33%; }
+
+.Foods_Time table tr td:nth-child(2) {text-align:center; }
+.Foods_Time table tr td:nth-child(3) {text-align:right; }
+
+.Hospital_Name {text-align:center; font-size:11px;}
+
+@media print {
+.headerBack,h3{ display:none !important}
+ #Main_Contain { width:100%;}
+ body {background:none}
+.container-fluid {padding-left:0; padding-right:0 }
+}

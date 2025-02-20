@@ -1,0 +1,68 @@
+﻿
+@-ms-viewport { width: device-width; }
+a { cursor:pointer;}
+h1,
+h3,
+h4,
+h5,
+h6 { font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; font-weight: 400;}
+h3 { border-bottom: 1px solid #9aa4af; color: #3f4954; margin-bottom: 10px; margin-top: 0; padding: 0 0 5px; }
+
+body { font:14px Montserrat, sans-serif; line-height: 1.8;}
+.headerBack { margin-bottom: 30px;  background-color: #474e5d;  border-bottom: 2px solid #272727;}
+.navbar-brand { color:#fff}
+.form-inline {margin-bottom:15px; }
+
+/*-----login----*/
+#Login .glyphicon { margin-right: 4px; top: 2px; }
+
+.Username,.caret{cursor:pointer; color:#fff; font-weight:bold}
+.UserPanel .glyphicon {font-size: 14px; color: #686868;}
+
+.dropdown-menu { padding: 15px 8px; }
+.dropdown-menu > li > a { display: inline; padding: 3px 5px; }
+.navbar-btn {color:#333 }
+/*-----End login----*/
+
+#myNavbar { padding-bottom:30px;}
+.selected { background-color:#bdceb6}
+
+/*---Treeview Style-----*/
+.treeNode { color: #565656; font: bold 14px Arial,Sans-Serif; border-bottom: 1px solid #ddd; width: 100%; padding: 6px 0; }
+.rootNode { border-bottom: 1px solid #b5b5b5; font-size:16px; font-weight: bold; padding: 10px 8px 12px 0; width: 100%; color: #333; }
+.leafNode { font: 13px Arial,Sans-Serif; padding: 4px 4px 4px 0; }
+.leafNode:hover { text-decoration: underline; color: #565656; }
+.Selected_Node { color: hsl(200,100%,18%); }
+/*---End Treeview Style-----*/
+/*-------------checkbox---------------*/
+input[type=checkbox] { display: none; }
+input[type=checkbox] + label { padding-left: 29px; height: 24px; display: inline-block; line-height: 24px; background-repeat: no-repeat; background-position: 7px 3px; font-size: 12px; vertical-align: middle; cursor: pointer; background-image: url(Image/CheckBox.png); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 20000; }
+input[type=checkbox]:checked + label { background-position: 7px -19px; background-image: url(Image/CheckBox.png); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+/*------------radio button----------*/
+input[type=radio] { display: none; }
+input[type=radio] + label { padding-left: 26px; height: 21px; display: inline-block; line-height: 21px; background-repeat: no-repeat; background-position: 5px 4px; font-size: 12px; vertical-align: middle; cursor: pointer; background-image: url(Image/RadioButton.png); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+input[type=radio]:checked + label { background-position: 5px -16px; background-image: url(Image/RadioButton.png); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+/*-----------End radio button------*/
+.dropdown { border: 1px solid #ddd; border-radius: 4px; cursor: pointer; display: inline-block; font-size: 14px; font-weight: 400; line-height: 1.42857; padding: 5px; vertical-align: middle; white-space: nowrap; color: #333; width: 200px; }
+.EroorStar { color: #f80101; font-size: 12px; font-weight: 700; }
+/*------------update progress----------------*/
+#progress_BG { position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 120; background-color: #000; filter: alpha(opacity=40); opacity: 0.7; display: none; }
+#progress { position: fixed; top: 40%; left: 46%; text-align: center; z-index: 200; }
+#progress b { color: hsl(200,100%,18%); background-color: #ddd; padding: 2px 5px; }
+
+#Main_Contain { min-height:750px;}
+footer { background-color: #f2f2f2; padding:25px 0; margin-top:20px; }
+#toTop { position: fixed; bottom: 10px; right: 10px; cursor: pointer; display: none; }
+
+#toBottom{ position: fixed; top: 55px; right: 10px; cursor: pointer;}
+
+.modal { position: fixed; z-index: 99999; height: 100%; width: 100%; top: 0; background-color: Black; filter: alpha(opacity=60); opacity: 0.6; -moz-opacity: 0.8; }
+.center { z-index: 1000; margin: 300px auto; padding: 10px; width: 130px; background-color: White; border-radius: 10px; filter: alpha(opacity=100); opacity: 1; -moz-opacity: 1; }
+.center b {color:#000; }
+.modal-header {background-color:#474E5D; color:#fff }
+
+
+@media (max-width: 767px) {
+ h3 { font-size: 17px; }
+}
