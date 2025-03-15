@@ -99,11 +99,12 @@
     <Content Include="Beneficiary\Card\Autistic_Card.aspx" />
     <Content Include="Beneficiary\Card\Autistic_List.aspx" />
     <Content Include="Beneficiary\Card\Beneficiary_List.aspx" />
-    <Content Include="Beneficiary\Card\CSS\award_logo.JPG" />
     <Content Include="Beneficiary\Card\CSS\Card.css" />
     <Content Include="Beneficiary\Card\CSS\Iftar.css" />
-    <Content Include="Beneficiary\Card\CSS\Oil_Pic.jpg" />
     <Content Include="Beneficiary\Card\Iftar_Card.aspx" />
+    <Content Include="Beneficiary\Card\images\award-logo.png" />
+    <Content Include="Beneficiary\Card\images\logo-watermark.png" />
+    <Content Include="Beneficiary\Card\images\student-card-left.png" />
     <Content Include="Beneficiary\Card\StudentBarCode.aspx" />
     <Content Include="Beneficiary\Card\Student_Card.aspx" />
     <Content Include="Beneficiary\Card\Stu_PayOrder.aspx" />
