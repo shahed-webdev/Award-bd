@@ -4,11 +4,11 @@
 .student-cards { border: 10px solid #2e3192;
                  height: 798px; padding-top: 10px;
                  background: url('../images/logo-watermark.png') no-repeat center center;
-                 background-size: 70% 50%;  }
+                 background-size: 70% 50%; }
 
 /*back section*/
 .back-section-title { font-weight: bold; border-bottom: 2px solid #2e3192;display:inline-block; }
-.bar-code-container { display: flex; justify-content: space-between; margin: 15px 20px }
+.bar-code-container { display: flex; justify-content: space-between; margin: 0 20px }
 .student-card-ad-section img{ width: 100%; }
 
 /*front section*/
@@ -18,7 +18,7 @@
 
 .front-section-header .title-section { text-align:center }
 .front-section-header .title-section h1 { font-size: 45px; font-weight: bold;margin-bottom:0 }
-.front-section-header .title-section p { font-size: 22px;color:#000  }
+.front-section-header .title-section p { font-size: 22px;color:#000 }
 .table-student-1 tbody > tr > td { border: 1px solid #2e3192; }
 
 

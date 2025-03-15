@@ -401,6 +401,7 @@ WHERE        (Benefit_Category.CategoryName = N'Student')"></asp:SqlDataSource>
                 barWidth: 2,
                 barHeight: 40,
             };
+
             var Code = $("[id*=CaseNoLabel]").text();
             $(".Barcode").barcode(Code, "code128", settings);
 
